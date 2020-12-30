@@ -1,0 +1,5 @@
+<input id="photo" type="file" />
+<button type="button" (click)="upload()">Upload</button>
+<div *ngFor="let pdf of pdfs">
+  <pdf-viewer src="{{ pdf.video }}" [render-text]="true" style="display: block;"></pdf-viewer>
+</div>
