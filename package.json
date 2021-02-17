@@ -17,6 +17,7 @@
     "http": "0.0.1-security",
     "mongoose": "^5.11.9",
     "multer": "^1.4.2",
+    "ngx-epic-video-player": "^1.0.6",
     "nodemon": "^2.0.6"
   }
 }

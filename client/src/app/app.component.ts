@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
 @Component({
@@ -7,13 +7,13 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  pdfs: any
+  videos: any
   constructor(private http: HttpClient, private el: ElementRef) {}
   ngOnInit() {
-    this.http.get('/video').subscribe(pdfs => {
-      if (pdfs) {
-        this.pdfs = pdfs
-        console.log(this.pdfs)
+    this.http.get('/video').subscribe(videos => {
+      if (videos) {
+        this.videos = videos
+        console.log(this.videos)
       } else {
         console.log("Error")
       }

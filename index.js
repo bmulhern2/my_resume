@@ -38,6 +38,7 @@ app.post('/upload', upload.single('photo'), function(req, res) {
     let newUser = {
         video: req.file.path
     }
+    console.log(newUser)
     Video.create(newUser)
 })
 
@@ -51,7 +52,7 @@ app.get('/video', function(req, res) {
     })
 })
 
-let port = process.env.PORT
+let port = process.env.PORT || 8080
 http.createServer(app).listen(port, function() {
     console.log("Server Started on PORT " + port)
 })

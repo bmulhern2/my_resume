@@ -1,4 +1,6 @@
 video {
     height: 10;
     widtH: 10%;
+} mat-tab {
+    color: warn;
 }

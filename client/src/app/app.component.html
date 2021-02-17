@@ -1,5 +1,11 @@
-<input id="photo" type="file" />
+<mat-tab-group>
+  <mat-tab label="Watch">
+    <div *ngFor="let video of videos">
+           <video autoplay src="{{ video.video }}"></video>
+    </div>
+  </mat-tab>
+  <mat-tab label="Upload">
+    <input id="photo" type="file" />
 <button type="button" (click)="upload()">Upload</button>
-<div *ngFor="let pdf of pdfs">
-  <pdf-viewer src="{{ pdf.video }}" [render-text]="true" style="display: block;"></pdf-viewer>
-</div>
+  </mat-tab>
+</mat-tab-group>
