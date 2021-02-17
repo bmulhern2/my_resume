@@ -51,7 +51,7 @@ app.get('/video', function(req, res) {
     })
 })
 
-let port = process.env.PORT
+let port = 8010 || process.env.PORT
 http.createServer(app).listen(port, function() {
     console.log("Server Started on PORT " + port)
 })
